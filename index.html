@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Aura | Descubra seu perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="topo">
+        <div class="logo">✦ MISSÃO AURA</div>
+        <span class="ano">EXPEDIÇÃO ESPACIAL • 2089</span>
+    </header>
+
+    <main class="container">
+
+        <section class="apresentacao">
+            <span class="etiqueta">✧ PROTOCOLO DE EXPLORAÇÃO ✧</span>
+            <h1>Descubra seu <span>universo</span></h1>
+            <p>
+                Um novo planeta espera por você.
+                Descubra seu perfil e encontre seu lugar
+                na equipe da próxima grande missão.
+            </p>
+        </section>
+
+        <section class="painel" id="painelFormulario">
+            <div class="titulo-painel">
+                <span class="icone">✧</span>
+                <div>
+                    <h2>Identificação da tripulação</h2>
+                    <p>Preencha os dados e revele seu potencial.</p>
+                </div>
+            </div>
+
+            <form id="formulario">
+
+                <div class="dados-pessoais">
+                    <div class="campo">
+                        <label for="nome">Seu nome</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            placeholder="Como podemos te chamar?"
+                            maxlength="80"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="nascimento">Data de nascimento</label>
+                        <input
+                            type="date"
+                            id="nascimento"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="separador"></div>
+
+                <h2 class="titulo-perguntas">
+                    ✦ Qual é a sua essência?
+                </h2>
+                <p class="subtitulo">
+                    Escolha uma alternativa em cada pergunta.
+                </p>
+
+                <fieldset class="pergunta">
+                    <legend>
+                        <span>01</span>
+                        Ao chegar a um planeta desconhecido, você...
+                    </legend>
+
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="1" required>
+                        <span>Investiga os equipamentos e a tecnologia.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="2">
+                        <span>Explora o ambiente e procura novidades.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="3">
+                        <span>Analisa os elementos e coleta amostras.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="4">
+                        <span>Organiza a equipe antes de agir.</span>
+                    </label>
+                </fieldset>
+
+                <fieldset class="pergunta">
+                    <legend>
+                        <span>02</span>
+                        Qual ferramenta você levaria?
+                    </legend>
+
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="1" required>
+                        <span>Um kit de robótica e reparos.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="2">
+                        <span>Um mapa estelar e uma mochila.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="3">
+                        <span>Um laboratório portátil.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="4">
+                        <span>Um sistema de planejamento da missão.</span>
+                    </label>
+                </fieldset>
+
+                <fieldset class="pergunta">
+                    <legend>
+                        <span>03</span>
+                        Qual é sua maior qualidade?
+                    </legend>
+
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="1" required>
+                        <span>Resolver problemas com criatividade.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="2">
+                        <span>Ter coragem para descobrir o desconhecido.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="3">
+                        <span>Ser curioso e gostar de aprender.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="4">
+                        <span>Organizar tarefas e tomar decisões.</span>
+                    </label>
+                </fieldset>
+
+                <fieldset class="pergunta">
+                    <legend>
+                        <span>04</span>
+                        Diante de um desafio inesperado, você...
+                    </legend>
+
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="1" required>
+                        <span>Cria uma solução tecnológica.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="2">
+                        <span>Experimenta caminhos diferentes.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="3">
+                        <span>Pesquisa para entender o problema.</span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="4">
+                        <span>Define prioridades e coordena a equipe.</span>
+                    </label>
+                </fieldset>
+
+                <p id="mensagemErro" class="mensagem-erro" role="alert"></p>
+
+                <button type="submit" class="botao-principal">
+                    DESCOBRIR MEU PERFIL ✧
+                </button>
+
+                <p class="rodape-formulario">
+                    ✧ Seu destino entre as estrelas começa aqui ✧
+                </p>
+
+            </form>
+        </section>
+
+        <section class="painel resultado" id="resultado" hidden>
+            <span class="etiqueta">✧ ANÁLISE CONCLUÍDA ✧</span>
+            <h2>Seu universo foi revelado!</h2>
+
+            <p class="saudacao" id="saudacao"></p>
+
+            <img id="imagemPerfil" src="" alt="Imagem do perfil">
+
+            <p class="categoria" id="categoria"></p>
+            <h3 id="nomePerfil"></h3>
+            <p id="descricaoPerfil" class="descricao"></p>
+
+            <div class="recomendacao">
+                <h4>✦ Sua missão especial</h4>
+                <p id="recomendacaoPerfil"></p>
+            </div>
+
+            <p id="mensagemEmpate" class="empate" hidden></p>
+
+            <button type="button" id="refazer" class="botao-principal">
+                -refaça-
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>MISSÃO AURA © 2089 • O FUTURO ESTÁ EM SUAS MÃOS ✦</p>
+    </footer>
+
+</body>
+</html>
